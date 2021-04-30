@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"X13+":function(n,t,e){"use strict";e.d(t,"a",(function(){return a}));var o=e("Lnxd");function a(n){return Object(o.a)({tag:"svg",attr:{viewBox:"0 0 16 16",fill:"currentColor"},child:[{tag:"path",attr:{fillRule:"evenodd",d:"M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z",clipRule:"evenodd"}}]})(n)}}}]);
-//# sourceMappingURL=0c428ae2-9163296a2c743d427d70.js.map
