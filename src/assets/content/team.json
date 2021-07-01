@@ -18,7 +18,7 @@
     },
     {
       "name": "Jérémy Viau-Trudel",
-      "title": "System administrator",
+      "title": "System Administrator",
       "linkedin": "https://www.linkedin.com/in/jvtrudel/",
       "github": "https://github.com/jvtrudel",
       "image": "002_jeremy_viau_trudel.jpg",
@@ -28,7 +28,7 @@
         "Prototyping, agility, design, R&D",
         "Python, Bash, Javascript, C/C++, Fortran",
         "Devops (Linux, Ansible, Cloud, Docker)",
-        "Data analysis"      
+        "Data analysis"
       ]
     }
   ]

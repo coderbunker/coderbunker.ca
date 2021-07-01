@@ -16,7 +16,7 @@ export default function Hero() {
           <div className="flex-1 flex flex-col justify-center items-start">
             <h1 className="text-3xl md:text-4xl leading-relaxed md:leading-12 mb-3">
               <span>
-                <Trans>Introducing Coderbunker in the </Trans>
+                <Trans>Introducing Coderbunker Canada in the </Trans>
               </span>
               <span className="inline highlight-red uppercase">
                 <Trans>North</Trans>
@@ -26,22 +26,6 @@ export default function Hero() {
               <Trans>We empower freelancer community to excel in long term projects.</Trans>
             </p>
             <StackedAvatar />
-            
-            {/* stats */}
-            {/* <div className="stats p-2 md:p-4 mb-10 flex">
-              <div className="px-12">
-                <small className="uppercase">
-                  <Trans># coders</Trans>
-                </small>
-                <h3 className="text-2xl">50+</h3>
-              </div>
-              <div className="px-12">
-                <small className="uppercase">
-                  <Trans># bunkers</Trans>
-                </small>
-                <h3 className="text-2xl">3</h3>
-              </div>
-            </div> */}
           </div>
 
           {/* Hero Image*/}
