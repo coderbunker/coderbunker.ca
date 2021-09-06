@@ -48,5 +48,22 @@
         "Training and communication"
       ]
     }
+    ,
+    {
+      "name": "Phoenix Ng",
+      "title": "FOSS Computing Consultant",
+      "linkedin": "https://www.linkedin.com/in/mathieugp/",
+      "github": "https://github.com/mathieugp",
+      "image": "003_mathieu_gauthier_pilote.jpg",
+      "highlights": [
+        "Trained as analyst programmer",
+        "20+ years of experience in computer industry",
+        "GNU/Linux Systems Administrator",
+        "CI/CD (Linux, Ansible, Cloud, Docker)",
+        "Cloud computing and automation",
+        "Web development",
+        "Training and communication"
+      ]
+    }    
   ]
 }
