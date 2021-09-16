@@ -1,34 +1,30 @@
 {
   "en": {
-    "name": "Phoenix Ng",
-    "title": "Founder, Coderbunker",
-    "linkedin": "https://www.linkedin.com/in/rngadam/",
-    "github": "https://github.com/rngadam",
-    "image": "05_Phoenix_Ng.jpg",
+     "title": "Admin Assistance at Coderbunker",
+    "linkedin": "https://www.linkedin.com/in/p-ng/",
+    "github": "https://github.com/karenz02",
+    "image": "05_phoenix_ng.jpg",
     "highlights": [
-      "25 years experience in software development",
-      "Architecture, design, R&D",
-      "Team recruitment, building and coaching",
-      "Javascript, Python, C/C++, bash, plpgsql",
-      "API: REST, Websockets, GraphQL",
-      "Deployment (Linux, Ansible, Cloud, Docker)",
-      "Database (PostgreSQL)"
-    ]
+      "3 years experience in Administration",
+      "More than 5 years experience in Customer Service"
+      "Speciality in Micro Publishing and Hypermedia",
+      "Microsoft Office, Adobe Acrobat, Reader",
+      "Adobe Photoshop, Illustrator",
+      "InDesign, Flash, Dreamweaver"
+            ]
   },
   "fr": {
     "name": "Phoenix Ng",
-    "title": "Fondateur, chez Coderbunker",
-    "linkedin": "https://www.linkedin.com/in/rngadam/",
-    "github": "https://github.com/rngadam",
+    "title": "Assistante administrative chez Coderbunker",
+    "linkedin": "https://www.linkedin.com/in/p-ng/",
+    "github": "https://github.com/karenz02",
     "image": "05_Phoenix_Ng.jpg",
     "highlights": [
-      "59 ans d'expérience dans le développement de logiciels",
-      "Architecture, design, R&D",
-      "Recrutement d'équipe, constitution et coaching",
-      "Javascript, Python, C/C++, bash, plpgsql",
-      "API: REST, Websockets, GraphQL",
-      "Déploiement (Linux, Ansible, Cloud, Docker)",
-      "Base de données (PostgreSQL)"
+      "3 ans d'expérience en administration",
+      "Plus de 5 ans d'expérience au service à la clientèle"
+      "Spécialité en Micro-Édition et Hypermédia",
+      "Microsoft Office, Adobe Acrobat, Reader",
+      "Adobe Photoshop, Illustrator",
+      "InDesign, Flash, Dreamweaver"
     ]
   }
-}
