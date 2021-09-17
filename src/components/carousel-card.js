@@ -1,10 +1,11 @@
 import * as React from "react";
 import styled from 'styled-components';
 import { FiLinkedin, FiGithub, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { MdWeb } from 'react-icons/md'
 import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function CarouselCard({ member, index, count, teamIndex, setTeamIndex }) {
-  const { name, title, image, linkedin, github, highlights } = member
+  const { name, title, image, linkedin, github, website, highlights } = member
 
   // handle carousel navigation
   const handlePrev = () => {
@@ -30,8 +31,18 @@ export default function CarouselCard({ member, index, count, teamIndex, setTeamI
               <p className="text-sm sm:text-xl">{title}</p>
             </div>
             <div className="text-sm sm:text-2xl md:text-3xl flex">
-              <a href={linkedin} aria-label="social media icon Linkedin" target="_blank" rel="noreferrer"><FiLinkedin className="mr-3"/></a>
-              <a href={github} aria-label="social media icon Github" target="_blank" rel="noreferrer"><FiGithub className="md:ml-3"/></a>
+              {
+                linkedin &&
+                <a href={linkedin} aria-label="social media icon Linkedin" target="_blank" rel="noreferrer"><FiLinkedin className="mr-3"/></a>
+              }
+              {
+                github &&
+                <a href={github} aria-label="social media icon Github" target="_blank" rel="noreferrer"><FiGithub className="md:ml-3"/></a>
+              }
+              {
+                website &&
+                <a href={website} aria-label="social media icon Website" target="_blank" rel="noreferrer"><MdWeb className="md:ml-3"/></a>
+              }
             </div>
           </div>
           {/* Highlights for large screens, show all */}
