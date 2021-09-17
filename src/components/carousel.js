@@ -11,6 +11,8 @@ export default function Carousel({ teamIndex, setTeamIndex, locale }) {
           name
           title
           linkedin
+          website
+          github
           image {
             childImageSharp {
               gatsbyImageData(
@@ -22,12 +24,13 @@ export default function Carousel({ teamIndex, setTeamIndex, locale }) {
             }
           }
           highlights
-          github
         }
         fr {
           name
           title
           linkedin
+          website
+          github
           image {
             childImageSharp {
               gatsbyImageData(
@@ -38,7 +41,6 @@ export default function Carousel({ teamIndex, setTeamIndex, locale }) {
             }
           }
           highlights
-          github
         }
       }
     }
