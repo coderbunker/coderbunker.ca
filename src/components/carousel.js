@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import CarouselCard from "./carousel-card";
+import CarouselCard from "./CarouselCard";
 
 export default function Carousel({ teamIndex, setTeamIndex, locale }) {
   // Query all team member info

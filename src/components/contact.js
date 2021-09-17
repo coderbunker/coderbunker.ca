@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { StaticImage } from "gatsby-plugin-image";
 
 import SiteBorderStyles from '../styles/SiteBorderStyles';
-import Footer from "./footer";
 
 import { AiTwotoneMail, AiTwotonePhone } from 'react-icons/ai';
 import { FiMapPin } from 'react-icons/fi'
@@ -47,7 +46,6 @@ export default function Contact() {
           <ContactForm />
         </div>
       </SiteBorderStyles>
-      <Footer />
       <div
         className="absolute"
         style={{zIndex: `-1`, width: `50vw`, left: `0`, bottom: `5vh`}}>
@@ -63,6 +61,7 @@ export default function Contact() {
 }
 
 const ContactStyles = styled.section`
+  height: calc(100vh - 56px);
   position: relative;
   display: flex;
   flex-direction: column;
