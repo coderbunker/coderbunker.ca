@@ -5,6 +5,7 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { Trans } from "react-i18next";
 
 const FooterStyle = styled.footer`
+  padding: 100px;
   background: var(--black);
   padding: 0.5rem 0;
   color: var(--lightgrey);
@@ -15,7 +16,7 @@ export default function Footer() {
     <FooterStyle>
       <SiteBorderStyles>
         {/* social links*/}
-        <div className="flex my-1 md:my-2 items-center justify-between md:justify-center md:text-xl">
+        <div className="flex my-1 md:my-2 items-center justify-between md:justify-center">
           <p className="" style={{ color: `var(--lightgrey)` }}>
             © {new Date().getFullYear()} Coderbunker, inc.
           </p>
