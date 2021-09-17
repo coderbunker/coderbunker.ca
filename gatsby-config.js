@@ -7,12 +7,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/assets/content`,
-      },
-    },
+
     `gatsby-plugin-postcss`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -34,8 +29,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `content`,
+        path: `${__dirname}/src/assets/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `locale`,
         path: `${__dirname}/locales`,
-        name: `locale`
       }
     },
     `gatsby-transformer-sharp`,
@@ -79,7 +81,17 @@ module.exports = {
           keySeparator: false,
           nsSeparator: false
         },
-        pages: []
+        pages: [
+          {
+            matchPath: '/:language?/members/:name',
+            getLanguageFromPath: true,
+            excludeLanguages: []
+          },
+          {
+            matchPath: '/preview',
+            languages: ['en']
+          }
+        ]
       }
     }
   ],
