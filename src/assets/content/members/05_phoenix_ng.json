@@ -1,0 +1,30 @@
+{
+  "en": {
+     "title": "Admin Assistance at Coderbunker",
+    "linkedin": "https://www.linkedin.com/in/p-ng/",
+    "github": "https://github.com/karenz02",
+    "image": "05_phoenix_ng.jpg",
+    "highlights": [
+      "3 years experience in Administration",
+      "More than 5 years experience in Customer Service",
+      "Speciality in Micro Publishing and Hypermedia",
+      "Microsoft Office, Adobe Acrobat, Reader",
+      "Adobe Photoshop, Illustrator",
+      "InDesign, Flash, Dreamweaver"
+    ]
+  },
+  "fr": {
+    "name": "Phoenix Ng",
+    "title": "Assistante administrative chez Coderbunker",
+    "linkedin": "https://www.linkedin.com/in/p-ng/",
+    "github": "https://github.com/karenz02",
+    "image": "05_Phoenix_Ng.jpg",
+    "highlights": [
+      "3 ans d'expérience en administration",
+      "Plus de 5 ans d'expérience au service à la clientèle",
+      "Spécialité en Micro-Édition et Hypermédia",
+      "Microsoft Office, Adobe Acrobat, Reader",
+      "Adobe Photoshop, Illustrator",
+      "InDesign, Flash, Dreamweaver"
+    ]
+  }
