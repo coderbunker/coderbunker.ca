@@ -1,13 +1,14 @@
 import { graphql } from 'gatsby';
-import React from 'react'
-import MemberCard from '../components/MemberCard';
-import Layout from '../components/layout'
-import Seo from '../components/seo';
+import React from 'react';
 import styled from 'styled-components';
 
+import MemberCard from '../components/MemberCard';
+import Layout from '../components/Layout';
+import Seo from '../components/Seo';
+
 export default function MemberPageTemplate({ data, pageContext }) {
-  const locale = pageContext.language
-  const member = data.membersJson[locale]
+  const locale = pageContext.language;
+  const member = data.membersJson[locale];
 
   return (
     <Layout>
@@ -16,7 +17,7 @@ export default function MemberPageTemplate({ data, pageContext }) {
         <MemberCard member={member} />
       </MemberPageStyles>
     </Layout>
-  )
+  );
 }
 
 const MemberPageStyles = styled.div`
@@ -24,7 +25,7 @@ const MemberPageStyles = styled.div`
   display: grid;
   place-content: center;
   padding: 20px;
-`
+`;
 
 export const data = graphql`
   query($member: String!) {
