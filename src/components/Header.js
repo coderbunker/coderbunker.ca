@@ -1,21 +1,19 @@
 import React from 'react';
-import PropTypes from "prop-types"
 import { Link } from 'gatsby-plugin-react-i18next';
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
-
-import SiteBorderStyles from '../styles/SiteBorderStyles';
-import { CallToAction } from "./button";
-import LanguageSwitcher from './language-switcher';
-
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
+
+import { SiteBorderStyles } from '../styles/SiteBorderStyles';
+import { CallToAction } from './Button';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   return (
     <HeaderStyles>
       <SiteBorderStyles>
         <div className="header-content items-center">
-          {/* social links*/}
+          {/* social links */}
           <div className="hidden md:block flex flex-row">
             <a className="inline-block mr-5" target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/coderbunker/">
               <FiLinkedin className="text-2xl" />
@@ -48,14 +46,6 @@ export default function Header() {
       </SiteBorderStyles>
     </HeaderStyles>
   );
-};
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: `Coderbunker Canada`,
 }
 
 const HeaderStyles = styled.header`

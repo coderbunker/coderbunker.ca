@@ -1,10 +1,10 @@
-import * as React from "react"
+import * as React from 'react';
 import { Trans } from 'gatsby-plugin-react-i18next';
 import styled from 'styled-components';
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from 'gatsby-plugin-image';
 
-import SiteBorderStyles from '../styles/SiteBorderStyles';
-import BackgroundImage from "./bg-image";
+import { SiteBorderStyles } from '../../styles/SiteBorderStyles';
+import BackgroundImage from '../BackgroundImage';
 
 export default function Join() {
   return (
@@ -23,21 +23,24 @@ export default function Join() {
           </p>
         </div>
         {/* hashtags */}
-        <div className="hash-tags" style={{ maxWidth: `800px`, margin: `0 auto` }}>
+        <div className="hash-tags" style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p className="lg:text-xl md:my-4 md:pb-8 text-center">#SoftwareDevelopment #EmbeddedSystems #Blockchain #DigitalIdentity #PublicKeyInfrastructure #SystemAdministration #Cybersecurity #Encryption #Linux #FPGA #ARM #RISC-V #Ethereum #PGP #PostgreSQL #AWS #Azure #GoogleCloud #etc</p>
-          <div style={{ maxWidth: `70vw`, width: `500px`, margin: `0 auto`, padding: `2rem` }}>
+          <div style={{
+            maxWidth: '70vw', width: '500px', margin: '0 auto', padding: '2rem',
+          }}
+          >
             <StaticImage
               placeholder="blurred"
-              src="../assets/images/coders.png"
+              src="../../assets/images/coders.png"
               alt="Coderbunker Coders Coworking"
             />
           </div>
         </div>
       </SiteBorderStyles>
       <div className="bg-img-wrapper flex">
-        <BackgroundImage style={{ width: `45vw` }} imgStyle={{ height: `auto` }} />
-        <BackgroundImage style={{ width: `30vw`, transform: `translate(-1vw, 10vw)` }} imgStyle={{ height: `auto` }} />
-        <BackgroundImage style={{ width: `10vw`, transform: `translate(5vw, 10vw)` }} imgStyle={{ height: `auto` }} />
+        <BackgroundImage style={{ width: '45vw' }} imgStyle={{ height: 'auto' }} />
+        <BackgroundImage style={{ width: '30vw', transform: 'translate(-1vw, 10vw)' }} imgStyle={{ height: 'auto' }} />
+        <BackgroundImage style={{ width: '10vw', transform: 'translate(5vw, 10vw)' }} imgStyle={{ height: 'auto' }} />
       </div>
     </JoinStyles>
   );

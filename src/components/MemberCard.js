@@ -1,11 +1,13 @@
-import * as React from "react";
+import React from 'react';
 import styled from 'styled-components';
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
-import { MdWeb } from 'react-icons/md'
-import { GatsbyImage } from "gatsby-plugin-image";
+import { MdWeb } from 'react-icons/md';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function MemberCard({ member }) {
-  const { name, title, image, linkedin, github, website, highlights } = member
+  const {
+    name, title, image, linkedin, github, website, highlights,
+  } = member;
 
   return (
     <MemberCardStyles>
@@ -13,7 +15,7 @@ export default function MemberCard({ member }) {
         <GatsbyImage
           image={image?.childImageSharp?.gatsbyImageData}
           className="w-1/3-vw h-1/3-vw md:w-1/3 md:h-auto"
-          imgStyle={{ objectPosition: `top center` }}
+          imgStyle={{ objectPosition: 'top center' }}
           alt={name}
         />
         <div className="p-2 md:p-8 w-2/3">
@@ -24,28 +26,28 @@ export default function MemberCard({ member }) {
             </div>
             <div className="text-sm sm:text-2xl md:text-3xl flex">
               {
-                linkedin &&
-                <a href={linkedin} aria-label="social media icon Linkedin" target="_blank" rel="noreferrer"><FiLinkedin className="mr-3"/></a>
+                linkedin
+                && <a href={linkedin} aria-label="social media icon Linkedin" target="_blank" rel="noreferrer"><FiLinkedin className="mr-3" /></a>
               }
               {
-                github &&
-                <a href={github} aria-label="social media icon Github" target="_blank" rel="noreferrer"><FiGithub className="md:ml-3"/></a>
+                github
+                && <a href={github} aria-label="social media icon Github" target="_blank" rel="noreferrer"><FiGithub className="md:ml-3" /></a>
               }
               {
-                website &&
-                <a href={website} aria-label="social media icon Website" target="_blank" rel="noreferrer"><MdWeb className="md:ml-3"/></a>
+                website
+                && <a href={website} aria-label="social media icon Website" target="_blank" rel="noreferrer"><MdWeb className="md:ml-3" /></a>
               }
             </div>
           </div>
           {/* Highlights for large screens, show all */}
           <ul className="py-4 hidden md:block">
-            {highlights.map(hl => <li key={hl}>{hl}</li>)}
+            {highlights.map((hl) => <li key={hl}>{hl}</li>)}
           </ul>
         </div>
       </div>
       {/* highlights for small screen, show first few */}
       <ul className="text-sm py-4 block md:hidden">
-        {highlights.map((hl, i) => <li key={hl + i}>{hl}</li>)}
+        {highlights.map((hl) => <li key={`xs-${hl}`}>{hl}</li>)}
       </ul>
     </MemberCardStyles>
   );

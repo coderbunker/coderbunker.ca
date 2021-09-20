@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import CarouselCard from "./CarouselCard";
+import CarouselCard from './CarouselCard';
 
 export default function Carousel({ teamIndex, setTeamIndex, locale }) {
   // Query all team member info
@@ -46,23 +46,21 @@ export default function Carousel({ teamIndex, setTeamIndex, locale }) {
     }
   }`);
 
-  const members = allMembersJson.nodes
-  const membersLocalized = members.map(member => member[locale])
+  const members = allMembersJson.nodes;
+  const membersLocalized = members.map((member) => member[locale]);
 
   return (
     <>
-      {membersLocalized.map((member, index) => {
-        return(
-          <CarouselCard
-            member={member}
-            key={member.github}
-            index={index}
-            count={members.length}
-            teamIndex={teamIndex}
-            setTeamIndex={setTeamIndex}
-          />
-        )
-      })}
+      {membersLocalized.map((member, index) => (
+        <CarouselCard
+          member={member}
+          key={member.github}
+          index={index}
+          count={members.length}
+          teamIndex={teamIndex}
+          setTeamIndex={setTeamIndex}
+        />
+      ))}
     </>
-  )
+  );
 }

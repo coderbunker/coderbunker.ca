@@ -1,10 +1,10 @@
-import * as React from "react"
+import React from 'react';
 import { Trans } from 'gatsby-plugin-react-i18next';
 import styled from 'styled-components';
 
-import SiteBorderStyles from '../styles/SiteBorderStyles';
-import BackgroundImage from "./bg-image";
-import Carousel from "./carousel";
+import { SiteBorderStyles } from '../../styles/SiteBorderStyles';
+import BackgroundImage from '../BackgroundImage';
+import Carousel from '../Carousel';
 
 export default function Team({ teamIndex, setTeamIndex, locale }) {
   return (
@@ -23,13 +23,13 @@ export default function Team({ teamIndex, setTeamIndex, locale }) {
           </p>
         </div>
         {/* Carousel */}
-        <Carousel teamIndex={teamIndex} setTeamIndex={setTeamIndex} locale={locale}/>
+        <Carousel teamIndex={teamIndex} setTeamIndex={setTeamIndex} locale={locale} />
       </SiteBorderStyles>
       <div className="bg-img-wrapper">
-        <BackgroundImage style={{width: `48vw`}}/>
+        <BackgroundImage style={{ width: '48vw' }} />
       </div>
     </TeamStyles>
-  )
+  );
 }
 
 const TeamStyles = styled.section`

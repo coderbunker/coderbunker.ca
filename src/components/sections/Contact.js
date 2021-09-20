@@ -1,13 +1,12 @@
-import React from "react"
+import React from 'react';
 import { Trans } from 'gatsby-plugin-react-i18next';
 import styled from 'styled-components';
-import { StaticImage } from "gatsby-plugin-image";
-
-import SiteBorderStyles from '../styles/SiteBorderStyles';
-
+import { StaticImage } from 'gatsby-plugin-image';
 import { AiTwotoneMail, AiTwotonePhone } from 'react-icons/ai';
-import { FiMapPin } from 'react-icons/fi'
-import ContactForm from "./contact-form";
+import { FiMapPin } from 'react-icons/fi';
+
+import { SiteBorderStyles } from '../../styles/SiteBorderStyles';
+import ContactForm from '../ContactForm';
 
 export default function Contact() {
   return (
@@ -16,7 +15,7 @@ export default function Contact() {
         {/* section-header */}
         <div className="text-left md:text-center py-4 md:pt-12">
           <h2 className="text-2xl lg:text-4xl">
-            <span className="highlight-red" style={{ whiteSpace: `nowrap` }}>
+            <span className="highlight-red" style={{ whiteSpace: 'nowrap' }}>
               <Trans>Connect</Trans>
             </span>
             <Trans> With Us</Trans>
@@ -25,7 +24,7 @@ export default function Contact() {
             <Trans>Have a Project? Interested in Joining Force?</Trans>
           </p>
         </div>
-        <div style={{ maxWidth: `900px`, margin: `0 auto` }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           {/* Contact Info */}
           <div className="flex md:pb-12">
             <div className="flex-1 flex md:flex-col items-center md:text-center p-2 md:p-4 text-md md:text-xl">
@@ -48,10 +47,13 @@ export default function Contact() {
       </SiteBorderStyles>
       <div
         className="absolute"
-        style={{zIndex: `-1`, width: `50vw`, left: `0`, bottom: `5vh`}}>
+        style={{
+          zIndex: '-1', width: '50vw', left: '0', bottom: '5vh',
+        }}
+      >
         <StaticImage
           placeholder="blurred"
-          src="../assets/images/map.png"
+          src="../../assets/images/map.png"
           width={1000}
           alt="Map outline of Canada"
         />

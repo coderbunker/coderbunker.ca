@@ -1,89 +1,87 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from 'react';
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import styled from 'styled-components';
 
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonFill } from 'react-icons/bs'
-import { ButtonRed } from "./button";
+import { BsFillPersonFill } from 'react-icons/bs';
+import { ButtonRed } from './Button';
 
 export default function ContactForm() {
   // Address android soft keyboard vh distortion
-  const [height, setHeight] = useState(0)
+  const [height, setHeight] = useState(0);
 
   useEffect(() => {
     setHeight(window.innerHeight);
-  }, [])
+  }, []);
   const setVhToOriginal = () => {
-    const viewport = document.querySelector(`meta[name=viewport]`);
+    const viewport = document.querySelector('meta[name=viewport]');
     if (window.innerHeight < height) {
-      document.documentElement.style.setProperty("overflow", "auto")
-      viewport.setAttribute(`content`, `height=` + height + `px, width=device-width, initial-scale=1.0`)
+      document.documentElement.style.setProperty('overflow', 'auto');
+      viewport.setAttribute('content', `height=${height}px, width=device-width, initial-scale=1.0`);
     }
-  }
+  };
 
   // Form handling
   const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: ""
-  })
+    name: '',
+    email: '',
+    message: '',
+  });
 
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  }
+  const encode = (data) => Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  const handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.formState })
+  const handleSubmit = (e) => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...this.formState }),
     })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
+      .then(() => alert('Success!'))
+      .catch((error) => alert(error));
 
     e.preventDefault();
-  }
+  };
 
   // input and textarea focus & blue event: update styling & address UI issues on mobile
-  const handleFocus = e => {
+  const handleFocus = (e) => {
     setVhToOriginal();
 
     // disable scroll snap
-    document.documentElement.style.setProperty("scroll-snap-type", "none")
+    document.documentElement.style.setProperty('scroll-snap-type', 'none');
 
     const elem = e.currentTarget;
-    if (elem.nodeName === "INPUT") {
+    if (elem.nodeName === 'INPUT') {
       const group = elem.parentElement;
       const label = group.firstChild;
-      label.classList.add("activated");
-      group.classList.add("focused");
+      label.classList.add('activated');
+      group.classList.add('focused');
 
       elem.addEventListener('blur', () => {
-          // enable scroll snap
-        document.documentElement.style.setProperty("scroll-snap-type", "y mandatory")
-          group.classList.remove("focused");
-          if (elem.value === "") {
-            label.classList.remove("activated");
-          }
+        // enable scroll snap
+        document.documentElement.style.setProperty('scroll-snap-type', 'y mandatory');
+        group.classList.remove('focused');
+        if (elem.value === '') {
+          label.classList.remove('activated');
+        }
       });
     } else {
-        elem.addEventListener('blur', () => {
+      elem.addEventListener('blur', () => {
         // enable scroll snap
-        document.documentElement.style.setProperty("scroll-snap-type", "y mandatory")
-      })
+        document.documentElement.style.setProperty('scroll-snap-type', 'y mandatory');
+      });
     }
-  }
+  };
 
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <ContactFormStyles
@@ -138,9 +136,9 @@ export default function ContactForm() {
         value={formState.message}
       />
       <input type="hidden" name="form-name" value="contact" />
-      <ButtonRed type="submit" text={t('Send')} style={{ float: `right` }} />
+      <ButtonRed type="submit" text={t('Send')} style={{ float: 'right' }} />
     </ContactFormStyles>
-  )
+  );
 }
 
 const ContactFormStyles = styled.form`

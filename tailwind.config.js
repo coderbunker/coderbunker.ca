@@ -19,7 +19,7 @@ module.exports = {
       },
       peach: {
         DEFAULT: '#FCF5E8',
-      }
+      },
     },
     extend: {
       margin: {
@@ -27,14 +27,14 @@ module.exports = {
         '-half-width': '50%',
       },
       lineHeight: {
-        '12': '3rem',
+        12: '3rem',
       },
       width: {
         '1/3-vw': '33vw',
       },
       height: {
         '1/3-vw': '33vw',
-      }
+      },
     },
   },
   variants: {

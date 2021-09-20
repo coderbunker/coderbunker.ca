@@ -1,11 +1,11 @@
-import * as React from "react"
+import * as React from 'react';
 import { Trans } from 'gatsby-plugin-react-i18next';
 import styled from 'styled-components';
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from 'gatsby-plugin-image';
 
-import LogoGarden from '../components/logo-garden';
-import SiteBorderStyles from '../styles/SiteBorderStyles';
-import StackedAvatar from "./stacked-avatar";
+import LogoGarden from '../LogoGarden';
+import { SiteBorderStyles } from '../../styles/SiteBorderStyles';
+import StackedAvatar from '../StackedAvatar';
 
 export default function Hero({ sectionRefs, setTeamIndex, pausedRef }) {
   return (
@@ -33,11 +33,11 @@ export default function Hero({ sectionRefs, setTeamIndex, pausedRef }) {
 
           </div>
 
-          {/* Hero Image*/}
+          {/* Hero Image */}
           <div className="hidden md:block p-16">
             <StaticImage
               placeholder="blurred"
-              src="../assets/images/coders.png"
+              src="../../assets/images/coders.png"
               alt="Coderbunker Coders"
             />
           </div>

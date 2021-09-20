@@ -1,9 +1,9 @@
-import * as React from "react";
+import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from "gatsby-plugin-image";
-import SiteBorderStyles from '../styles/SiteBorderStyles';
-import styled from "styled-components";
+import { GatsbyImage } from 'gatsby-plugin-image';
+import styled from 'styled-components';
 import { Trans } from 'gatsby-plugin-react-i18next';
+import { SiteBorderStyles } from '../styles/SiteBorderStyles';
 
 export default function LogoGarden() {
   // query all partnerlogos
@@ -35,12 +35,13 @@ export default function LogoGarden() {
           <Trans>Trusted by these partners and clients</Trans>
         </p>
         <div className="horizontal-scroll-wrapper">
-          {allPartnersJson.nodes.map(partner => (
+          {allPartnersJson.nodes.map((partner) => (
             <a title={partner.name} href={partner.website} target="_blank" rel="noreferrer" key={partner.id}>
               <GatsbyImage
                 image={partner.logo?.childImageSharp.gatsbyImageData}
-                imgStyle={{ objectFit: `contain` }}
-                alt={partner.name} />
+                imgStyle={{ objectFit: 'contain' }}
+                alt={partner.name}
+              />
             </a>
           ))}
         </div>
