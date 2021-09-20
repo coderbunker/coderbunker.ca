@@ -1,9 +1,9 @@
-import * as React from "react"
+import * as React from 'react';
 import { Trans } from 'gatsby-plugin-react-i18next';
 import styled from 'styled-components';
 import { FaCube, FaChalkboardTeacher } from 'react-icons/fa';
-import SiteBorderStyles from '../styles/SiteBorderStyles';
-import BackgroundImage from "./bg-image";
+import { SiteBorderStyles } from '../../styles/SiteBorderStyles';
+import BackgroundImage from '../BackgroundImage';
 
 export default function Service() {
   return (
@@ -35,7 +35,9 @@ export default function Service() {
             </div>
             <p className="my-3 lg:text-xl">
               <span className="inline">
-              <Trans>Consolidate your HR & IT budget towards direct actions to solve your problems.</Trans>
+                <Trans>
+                  Consolidate your HR & IT budget towards direct actions to solve your problems.
+                </Trans>
               </span>
             </p>
             <ul className="hidden md:block lg:my-3 lg:text-xl">
@@ -75,12 +77,12 @@ export default function Service() {
         </div>
       </SiteBorderStyles>
       <div className="bg-img-wrapper flex">
-        <BackgroundImage style={{width: `40vw`}} imgStyle={{height: `100%`}}/>
-        <BackgroundImage style={{width: `25vw`, transform: `translate(-1vw, 10vw)`}} imgStyle={{height: `auto`}}/>
-        <BackgroundImage style={{width: `10vw`, transform: `translate(5vw, 10vw)`}} imgStyle={{height: `auto`}}/>
+        <BackgroundImage style={{ width: '40vw' }} imgStyle={{ height: '100%' }} />
+        <BackgroundImage style={{ width: '25vw', transform: 'translate(-1vw, 10vw)' }} imgStyle={{ height: 'auto' }} />
+        <BackgroundImage style={{ width: '10vw', transform: 'translate(5vw, 10vw)' }} imgStyle={{ height: 'auto' }} />
       </div>
     </ServiceStyles>
-  )
+  );
 }
 
 const ServiceStyles = styled.section`

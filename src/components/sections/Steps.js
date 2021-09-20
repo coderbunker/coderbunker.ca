@@ -1,8 +1,8 @@
-import * as React from "react"
+import * as React from 'react';
 import { Trans } from 'gatsby-plugin-react-i18next';
 import styled from 'styled-components';
-import SiteBorderStyles from '../styles/SiteBorderStyles';
-import { FaSignature, FaRocket, FaCubes } from "react-icons/fa";
+import { FaSignature, FaRocket, FaCubes } from 'react-icons/fa';
+import { SiteBorderStyles } from '../../styles/SiteBorderStyles';
 
 export default function Steps() {
   return (
@@ -11,6 +11,7 @@ export default function Steps() {
         {/* section-header */}
         <div className="text-left md:text-center py-4 md:pt-16 lg:pt-24">
           <h2 className="text-2xl lg:text-4xl">
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <Trans>Let's Get To </Trans>
             <span className="highlight-red">
               <Trans>Work</Trans>
@@ -46,7 +47,9 @@ export default function Steps() {
                 <Trans>Start Building</Trans>
               </h3>
               <p className="lg:text-xl">
-                <Trans>Assemble the team based on your problem. Convert dollars to value right away.</Trans>
+                <Trans>
+                  Assemble the team based on your problem. Convert dollars to value right away.
+                </Trans>
               </p>
             </div>
           </div>
@@ -60,14 +63,16 @@ export default function Steps() {
                 <Trans>Iteratively develop</Trans>
               </h3>
               <p className="lg:text-xl">
-                <Trans>Continual improvement to develop a tailored, sustainable and scalable solution.</Trans>
+                <Trans>
+                  Continual improvement to develop a tailored, sustainable and scalable solution.
+                </Trans>
               </p>
             </div>
           </div>
         </div>
       </SiteBorderStyles>
     </StepsStyles>
-  )
+  );
 }
 
 const StepsStyles = styled.section`
