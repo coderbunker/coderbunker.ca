@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import siteOg from '../assets/images/coderbunker-og.png';
 
 function Seo({
-  description, lang, meta, title,
+  description, lang, meta, title, image,
 }) {
   const { site } = useStaticQuery(
     graphql`
@@ -14,6 +15,7 @@ function Seo({
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -22,6 +24,7 @@ function Seo({
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
+  const ogImage = image || siteOg;
 
   return (
     <Helmet
@@ -42,6 +45,14 @@ function Seo({
         {
           property: 'og:description',
           content: metaDescription,
+        },
+        {
+          property: 'og:image',
+          content: `${site.siteMetadata.siteUrl}${ogImage}`,
+        },
+        {
+          property: 'og:url',
+          content: `${site.siteMetadata.siteUrl}`,
         },
         {
           property: 'og:type',
@@ -72,7 +83,6 @@ Seo.defaultProps = {
   lang: 'en',
   meta: [],
   description: '',
-  author: '',
 };
 
 Seo.propTypes = {
