@@ -12,7 +12,7 @@ export default function MemberPageTemplate({ data, pageContext }) {
 
   return (
     <Layout>
-      <Seo title={member.name} />
+      <Seo title={member.name} image={member.image.publicURL} />
       <MemberPageStyles>
         <MemberCard member={member} />
       </MemberPageStyles>
@@ -37,6 +37,7 @@ export const data = graphql`
         website
         github
         image {
+          publicURL
           childImageSharp {
             gatsbyImageData(
               width: 360,
@@ -55,6 +56,7 @@ export const data = graphql`
         website
         github
         image {
+          publicURL
           childImageSharp {
             gatsbyImageData(
               width: 500,
