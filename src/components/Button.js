@@ -1,9 +1,9 @@
-import * as React from "react";
+import React from 'react';
 import styled from 'styled-components';
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 
 function CallToAction() {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <ButtonStyle>
@@ -11,15 +11,24 @@ function CallToAction() {
         <Trans>Retain Us</Trans>
       </a>
     </ButtonStyle>
-  )
+  );
 }
 
-function ButtonRed({ type, text, className, style, dataAos, dataAosDelay }) {
+function ButtonRed({
+  type, text, className, style,
+}) {
   return (
     <ButtonStyle>
-      <button data-aos={dataAos} data-aos-delay={dataAosDelay} type={type} className={`px-4 md:px-6 py-2 text-lg md:text-xl ${className ? className : ""}`} style={style}>{text}</button>
+      <button
+        type={type === 'submit' ? 'submit' : 'button'}
+        className={`px-4 md:px-6 py-2 text-lg md:text-xl ${className || ''}`}
+        style={style}
+      >
+        {text}
+
+      </button>
     </ButtonStyle>
-  )
+  );
 }
 
 export { CallToAction, ButtonRed };
@@ -39,5 +48,4 @@ const ButtonStyle = styled.div`
       color: var(--white) !important;
     }
   }
-`
-
+`;

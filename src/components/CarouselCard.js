@@ -1,27 +1,33 @@
-import * as React from "react";
+import * as React from 'react';
 import styled from 'styled-components';
-import { FiLinkedin, FiGithub, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { MdWeb } from 'react-icons/md'
-import { GatsbyImage } from "gatsby-plugin-image";
+import {
+  FiLinkedin, FiGithub, FiChevronLeft, FiChevronRight,
+} from 'react-icons/fi';
+import { MdWeb } from 'react-icons/md';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
-export default function CarouselCard({ member, index, count, teamIndex, setTeamIndex }) {
-  const { name, title, image, linkedin, github, website, highlights } = member
+export default function CarouselCard({
+  member, index, count, teamIndex, setTeamIndex,
+}) {
+  const {
+    name, title, image, linkedin, github, website, highlights,
+  } = member;
 
   // handle carousel navigation
   const handlePrev = () => {
-    setTeamIndex(teamIndex - 1)
-  }
+    setTeamIndex(teamIndex - 1);
+  };
   const handleNext = () => {
-    setTeamIndex(teamIndex + 1)
-  }
+    setTeamIndex(teamIndex + 1);
+  };
 
   return (
-    <CarouselCardStyles className={`${teamIndex === index ? "active" : ""}`}>
+    <CarouselCardStyles className={`${teamIndex === index ? 'active' : ''}`}>
       <div className="flex flex-1 md:flex-row-reverse overflow-hidden bg-peach md:bg-white">
         <GatsbyImage
           image={image?.childImageSharp?.gatsbyImageData}
           className="w-1/3-vw h-1/3-vw md:w-1/3 md:h-auto"
-          imgStyle={{ objectPosition: `top center` }}
+          imgStyle={{ objectPosition: 'top center' }}
           alt={name}
         />
         <div className="p-2 md:p-8 w-2/3">
@@ -32,35 +38,45 @@ export default function CarouselCard({ member, index, count, teamIndex, setTeamI
             </div>
             <div className="text-sm sm:text-2xl md:text-3xl flex">
               {
-                linkedin &&
-                <a href={linkedin} aria-label="social media icon Linkedin" target="_blank" rel="noreferrer"><FiLinkedin className="mr-3"/></a>
+                linkedin
+                && <a href={linkedin} aria-label="social media icon Linkedin" target="_blank" rel="noreferrer"><FiLinkedin className="mr-3" /></a>
               }
               {
-                github &&
-                <a href={github} aria-label="social media icon Github" target="_blank" rel="noreferrer"><FiGithub className="md:ml-3"/></a>
+                github
+                && <a href={github} aria-label="social media icon Github" target="_blank" rel="noreferrer"><FiGithub className="md:ml-3" /></a>
               }
               {
-                website &&
-                <a href={website} aria-label="social media icon Website" target="_blank" rel="noreferrer"><MdWeb className="md:ml-3"/></a>
+                website
+                && <a href={website} aria-label="social media icon Website" target="_blank" rel="noreferrer"><MdWeb className="md:ml-3" /></a>
               }
             </div>
           </div>
           {/* Highlights for large screens, show all */}
-          <ul className="py-4 hidden md:block" style={{height: `312px`}}>
-            {highlights.map(hl => <li key={hl}>{hl}</li>)}
+          <ul className="py-4 hidden md:block" style={{ height: '312px' }}>
+            {highlights.map((hl) => <li key={hl}>{hl}</li>)}
           </ul>
         </div>
       </div>
       {/* highlights for small screen, show first few */}
       <ul className="text-sm py-4 block md:hidden">
-        {highlights.slice(0, 3).map((hl, i) => <li key={hl + i}>{hl}</li>)}
+        {highlights.slice(0, 3).map((hl) => <li key={`xs-${hl}`}>{hl}</li>)}
       </ul>
       {/* Button to navigate prev and next */}
       <div className="carousel-btns">
-        <button onClick={handlePrev} className="text-2xl p-4" disabled={index === 0}>
+        <button
+          type="button"
+          onClick={handlePrev}
+          className="text-2xl p-4"
+          disabled={index === 0}
+        >
           <FiChevronLeft />
         </button>
-        <button onClick={handleNext} className="text-2xl p-4" disabled={index === count - 1}>
+        <button
+          type="button"
+          onClick={handleNext}
+          className="text-2xl p-4"
+          disabled={index === count - 1}
+        >
           <FiChevronRight />
         </button>
       </div>
