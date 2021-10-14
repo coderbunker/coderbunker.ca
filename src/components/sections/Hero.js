@@ -52,6 +52,8 @@ export default function Hero({ sectionRefs, setTeamIndex, pausedRef }) {
 }
 
 const HeroStyles = styled.section`
+  padding-bottom: 0;
+
   position: relative;
   .hero {
     height: calc(80vh - 100px);

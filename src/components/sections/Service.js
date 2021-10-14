@@ -10,7 +10,7 @@ export default function Service() {
     <ServiceStyles>
       <SiteBorderStyles className="wrapper">
         {/* section-header */}
-        <div className="text-left md:text-center py-4 md:pt-16 lg:pt-24">
+        <div className="text-left md:text-center py-4 md:pt-16 lg:py-24">
           <h2 className="text-2xl lg:text-4xl">
             <span className="highlight-red">
               <Trans>Customize</Trans>

@@ -33,8 +33,8 @@ const GlobalStyles = createGlobalStyle`
     width: min-content;
   }
   section {
-    padding-top: 100px;
-    height: 100vh;
+    padding: 100px 0;
+    min-height: 100vh;
   }
   button:focus, button:hover {
     outline: none;
@@ -43,7 +43,6 @@ const GlobalStyles = createGlobalStyle`
     display: grid;
     align-items: flex-start;
     height: 100%;
-    overflow: auto;
   }
 `;
 
