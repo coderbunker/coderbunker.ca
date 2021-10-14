@@ -1,6 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import styled from 'styled-components';
 
 export default function StackedAvatar({ sectionRefs, setTeamIndex, pausedRef }) {
   // Query all team name and image sorted by image file name
@@ -47,24 +48,17 @@ export default function StackedAvatar({ sectionRefs, setTeamIndex, pausedRef }) 
   const members = allMembersJson.nodes.map((member) => member.en);
 
   return (
-    <div className="py-8 flex">
+    <AvatarsStyles>
       {members.map((member, i) => {
         const zIndex = members.length - i;
-        const translateX = i * -30;
         return (
           <button
+            type="button"
             data-team={i}
             onClick={handleClick}
             key={`avatar-${member.name}`}
             style={{
-              width: '75px',
-              height: '75px',
-              zIndex: `${zIndex}`,
-              border: '1px solid var(--white)',
-              borderRadius: '50%',
-              background: 'var(--white)',
-              transform: `translateX(${translateX}%)`,
-              position: 'relative',
+              zIndex,
             }}
           >
             <GatsbyImage
@@ -75,8 +69,33 @@ export default function StackedAvatar({ sectionRefs, setTeamIndex, pausedRef }) 
             />
           </button>
         );
-      }).slice(0, 7)}
-      {/* TODO: handle representation for members with count above 7 */}
-    </div>
+      })}
+    </AvatarsStyles>
   );
 }
+
+const AvatarsStyles = styled.div`
+  margin: 1rem 0;
+  max-width: calc(100vw - 40px);
+  overflow-x: scroll;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  > button {
+    display: inline-table;
+    height: 100%;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-left: -12px;
+    }
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+`;
