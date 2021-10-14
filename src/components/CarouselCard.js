@@ -59,7 +59,7 @@ export default function CarouselCard({
       </div>
       {/* highlights for small screen, show first few */}
       <ul className="text-sm py-4 block md:hidden">
-        {highlights.slice(0, 3).map((hl) => <li key={`xs-${hl}`}>{hl}</li>)}
+        {highlights.slice(0, 5).map((hl) => <li key={`xs-${hl}`}>{hl}</li>)}
       </ul>
       {/* Button to navigate prev and next */}
       <div className="carousel-btns">

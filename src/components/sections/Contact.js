@@ -68,7 +68,12 @@ const ContactStyles = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   p, svg {
     color: var(--darkgrey);
+  }
+
+  @media (min-width: 640px) {
+    min-height: unset;
   }
 `;
