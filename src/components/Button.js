@@ -7,7 +7,7 @@ function CallToAction() {
 
   return (
     <ButtonStyle>
-      <a href={t('https://form.jotform.com/211253962199057')} target="_blank" rel="noreferrer" className="px-4 md:px-6 py-2 text-lg md:text-xl">
+      <a href={t('https://cal.com/rngadam')} target="_blank" rel="noreferrer" className="px-4 md:px-6 py-2 text-lg md:text-xl">
         <Trans>Retain Us</Trans>
       </a>
     </ButtonStyle>

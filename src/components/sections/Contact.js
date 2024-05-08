@@ -29,7 +29,7 @@ export default function Contact() {
           <div className="flex md:pb-12">
             <div className="flex-1 flex md:flex-col items-center md:text-center p-2 md:p-4 text-md md:text-xl">
               <FiMapPin className="text-3xl m-2 md:mb-4" />
-              <Trans>830 rue Saint-Joseph Est, Suite 500, Québec QC, Canada, G1K 3C9</Trans>
+              <Trans>Coop Ecto, 936 Mont-Royal Ave E, Montreal, Quebec H2J 1X2</Trans>
             </div>
             <a href="mailto:info@coderbunker.ca" className="hidden md:flex flex-1 flex-col items-center p-4 text-md md:text-xl">
               <AiTwotoneMail className="text-3xl md:mb-4" />
