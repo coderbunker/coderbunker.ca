@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-index-js",
+    "path": "/",
+    "result": {"data":{"locales":{"edges":[]}},"pageContext":{"language":"en","i18n":{"language":"en","languages":["en","fr"],"defaultLanguage":"en","generateDefaultLanguagePage":false,"routed":false,"originalPath":"/","path":"/"}}},
+    "staticQueryHashes": ["1202058189","2224611999","2316478561","3649515864","3758068040","764694655"]}
