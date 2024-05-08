@@ -11,7 +11,6 @@ export default function Carousel({ teamIndex, setTeamIndex, locale }) {
           name
           title
           linkedin
-          website
           github
           image {
             childImageSharp {
@@ -29,7 +28,6 @@ export default function Carousel({ teamIndex, setTeamIndex, locale }) {
           name
           title
           linkedin
-          website
           github
           image {
             childImageSharp {

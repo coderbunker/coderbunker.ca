@@ -34,7 +34,6 @@ export const data = graphql`
         name
         title
         linkedin
-        website
         github
         image {
           publicURL
@@ -53,7 +52,6 @@ export const data = graphql`
         name
         title
         linkedin
-        website
         github
         image {
           publicURL
