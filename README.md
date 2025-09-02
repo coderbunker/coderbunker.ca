@@ -51,22 +51,22 @@ You can refer to Netlify deploy preview on the pull request.
 
 You can use gh-pages as an alternative 👉 [coderbunker.github.io/coderbunker.ca](https://coderbunker.github.io/coderbunker.ca/)
 
-```
+```bash
 gatsby clean
 npm run deploy
 ```
 or
-```
+```bash
 gatsby clean
 gatsby build --prefix-paths && gh-pages -d public -r git@github.com:coderbunker/coderbunker.ca.git
 ```
 
 ### Build
-```
+```bash
 npm run build
 ```
 or
-```
+```bash
 gatsby build
 ```
 
