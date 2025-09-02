@@ -1,0 +1,32 @@
+{
+  "en": {
+    "name": "Alexandre Michaud",
+    "title": "Backend Developer",
+    "linkedin": "https://www.linkedin.com/in/alexmichaud123/",
+    "github": "https://github.com/alex-michaud",
+    "image": "03_alexandre_michaud.jpg",
+    "highlights": [
+      "20 years experience in software development",
+      "API architecture, AI integration, technical documentation, automation",
+      "Javascript, Typescript",
+      "Node.js, Express.js, Bun, Hono",
+      "API: REST, Websockets, GraphQL",
+      "Database (PostgreSQL)"
+    ]
+  },
+  "fr": {
+    "name": "Alexandre Michaud",
+    "title": "Développeur Backend",
+    "linkedin": "https://www.linkedin.com/in/alexmichaud123/",
+    "github": "https://github.com/alex-michaud",
+    "image": "03_alexandre_michaud.jpg",
+    "highlights": [
+      "20 ans d'expérience dans le développement de logiciels",
+      "Architecture d'API, intégration d'IA, documentation technique, automatisation",
+      "Javascript, Typescript",
+      "Node.js, Express.js, Bun, Hono",
+      "API: REST, Websockets, GraphQL",
+      "Base de données (PostgreSQL)"
+    ]
+  }
+}
