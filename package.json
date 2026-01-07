@@ -9,8 +9,8 @@
     "tailwindcss": "3"
   },
   "scripts": {
-    "deploy": "gatsby build && gh-pages -d public -b main",
-    "deploy-only": "gh-pages -d public -b main",
+    "deploy": "gatsby build && gh-pages -d public -b gh-pages -f",
+    "deploy-only": "gh-pages -d public -b gh-pages -f",
     "serve": "gatsby serve"
   },
   "dependencies": {
