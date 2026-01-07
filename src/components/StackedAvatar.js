@@ -6,7 +6,7 @@ import styled from 'styled-components';
 export default function StackedAvatar({ sectionRefs, setTeamIndex, pausedRef }) {
   // Query all team name and image sorted by image file name
   const { allMembersJson } = useStaticQuery(graphql`{
-    allMembersJson(sort: {fields: en___image___base, order: ASC}) {
+    allMembersJson(sort: {en: {image: {base: ASC}}}) {
       nodes {
         en {
           name

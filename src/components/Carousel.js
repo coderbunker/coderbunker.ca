@@ -5,7 +5,7 @@ import CarouselCard from './CarouselCard';
 export default function Carousel({ teamIndex, setTeamIndex, locale }) {
   // Query all team member info
   const { allMembersJson } = useStaticQuery(graphql`{
-    allMembersJson(sort: {fields: en___image___base, order: ASC}) {
+    allMembersJson(sort: {en: {image: {base: ASC}}}) {
       nodes {
         en {
           name

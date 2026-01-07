@@ -15,7 +15,7 @@ export default function Header() {
         <div className="header-content items-center">
           {/* social links */}
           <div className="hidden md:block flex flex-row">
-            <a className="inline-block mr-5" target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/coderbunker/">
+            <a className="inline-block mr-5" target="_blank" rel="noreferrer" href="https://www.linkedin.com/showcase/coderbunker.ca/">
               <FiLinkedin className="text-2xl" />
             </a>
             <a className="inline-block" target="_blank" rel="noreferrer" href="https://github.com/coderbunker">

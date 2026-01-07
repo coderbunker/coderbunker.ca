@@ -2,7 +2,7 @@
   description = "Gatsby development environment for coderbunker.ca";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -14,7 +14,7 @@
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            nodejs_22
+            nodejs_24
             bun
             
             # Native dependencies often needed for Gatsby/Sharp/Node-gyp
@@ -25,6 +25,7 @@
             autoconf
             automake
             nasm
+            imagemagick
           ];
 
           shellHook = ''

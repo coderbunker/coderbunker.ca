@@ -8,7 +8,7 @@ import { SiteBorderStyles } from '../styles/SiteBorderStyles';
 export default function LogoGarden() {
   // query all partnerlogos
   const { allPartnersJson } = useStaticQuery(graphql`{
-    allPartnersJson(sort: {fields: logo___base, order: ASC}) {
+    allPartnersJson(sort: {logo: {base: ASC}}) {
       nodes {
         id
         name
@@ -38,7 +38,7 @@ export default function LogoGarden() {
           {allPartnersJson.nodes.map((partner) => (
             <a title={partner.name} href={partner.website} target="_blank" rel="noreferrer" key={partner.id}>
               <GatsbyImage
-                image={partner.logo?.childImageSharp.gatsbyImageData}
+                image={partner.logo?.childImageSharp?.gatsbyImageData}
                 imgStyle={{ objectFit: 'contain' }}
                 alt={partner.name}
               />
@@ -71,6 +71,7 @@ const LogoGardenStyles = styled.div`
     &::-webkit-scrollbar {
       display: none;
     }
+    text-align: center;
     > a {
       display: inline-table;
       height: 100%;
