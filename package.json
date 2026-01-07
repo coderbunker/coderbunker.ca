@@ -10,7 +10,8 @@
   },
   "scripts": {
     "deploy": "gatsby build && gh-pages -d public -b main",
-    "deploy-only": "gh-pages -d public -b main"
+    "deploy-only": "gh-pages -d public -b main",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "aos": "^2.3.4",
